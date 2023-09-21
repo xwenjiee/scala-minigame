@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="1165.0" stylesheets="@GameTheme.css" xmlns="http://javafx.com/javafx/8.0.202" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.view.SetGameController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="346.0" prefWidth="570.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Select Your Agent">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutY="24.0" prefHeight="552.0" prefWidth="694.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="24.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="533.6" minWidth="10.0" prefWidth="533.6" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.20001220703125" minWidth="0.0" prefWidth="0.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <ImageView fx:id="a2Icon" fitHeight="230.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" translateX="40.0" GridPane.columnIndex="1" />
+                              <ImageView fx:id="a3Icon" fitHeight="230.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" translateX="45.0" GridPane.rowIndex="1" />
+                              <ImageView fx:id="a4Icon" fitHeight="230.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" translateX="30.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ImageView fx:id="a1Icon" fitHeight="230.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" translateX="45.0" />
+                              <RadioButton fx:id="selecta1" mnemonicParsing="false" onAction="#agentSelection" translateX="300.0">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="tGroup" />
+                                 </toggleGroup>
+                                 <font>
+                                    <Font name="Cooper Black" size="24.0" />
+                                 </font></RadioButton>
+                              <RadioButton fx:id="selecta3" mnemonicParsing="false" onAction="#agentSelection" toggleGroup="$tGroup" translateX="300.0" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Cooper Black" size="24.0" />
+                                 </font></RadioButton>
+                              <RadioButton fx:id="selecta2" mnemonicParsing="false" onAction="#agentSelection" toggleGroup="$tGroup" translateX="300.0" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Cooper Black" size="24.0" />
+                                 </font></RadioButton>
+                              <RadioButton fx:id="selecta4" mnemonicParsing="false" onAction="#agentSelection" toggleGroup="$tGroup" translateX="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Cooper Black" size="24.0" />
+                                 </font></RadioButton>
+                           </children>
+                        </GridPane>
+                        <Button layoutX="316.0" layoutY="577.0" mnemonicParsing="false" onAction="#checkSelect" prefHeight="36.0" prefWidth="136.0" text="Start Game" AnchorPane.rightAnchor="180.0">
+                           <font>
+                              <Font name="Cooper Black" size="18.0" />
+                           </font></Button>
+                        <Button layoutX="181.0" layoutY="577.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="148.0" text="Back To Main" AnchorPane.leftAnchor="180.0">
+                           <font>
+                              <Font name="Cooper Black" size="18.0" />
+                           </font></Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Agent Information">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane prefHeight="285.0" prefWidth="530.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="554.8" minWidth="10.0" prefWidth="279.3999877929688" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="530.9999542236328" minWidth="0.0" prefWidth="281.8000122070313" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="497.5999755859375" minWidth="10.0" prefWidth="284.20000000000005" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="279.4000000000001" minWidth="10.0" prefWidth="279.4000000000001" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ImageView fx:id="a2Icon2" fitHeight="230.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" translateX="40.0" GridPane.columnIndex="2" />
+                              <ImageView fx:id="a3Icon2" fitHeight="230.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" translateX="45.0" GridPane.rowIndex="1" />
+                              <ImageView fx:id="a4Icon2" fitHeight="230.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" translateX="35.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <ImageView fx:id="a1Icon2" fitHeight="230.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" translateX="45.0" />
+                              <GridPane GridPane.columnIndex="1">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+                                       <font>
+                                          <Font name="Cooper Black" size="26.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Weapon:" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="26.0" />
+                                       </font></Text>
+                                    <Label fx:id="a1Name" text="Label" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="26.0" />
+                                       </font></Label>
+                                    <Label fx:id="a1Weapon" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="26.0" />
+                                       </font></Label>
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+                                       <font>
+                                          <Font name="Cooper Black" size="26.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Weapon:" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="26.0" />
+                                       </font></Text>
+                                    <Label fx:id="a3Name" text="Label" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="26.0" />
+                                       </font></Label>
+                                    <Label fx:id="a3Weapon" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="26.0" />
+                                       </font></Label>
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+                                       <font>
+                                          <Font name="Cooper Black" size="26.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Weapon:" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="26.0" />
+                                       </font></Text>
+                                    <Label fx:id="a2Name" text="Label" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="26.0" />
+                                       </font></Label>
+                                    <Label fx:id="a2Weapon" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="26.0" />
+                                       </font></Label>
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+                                       <font>
+                                          <Font name="Cooper Black" size="26.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Weapon:" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="26.0" />
+                                       </font></Text>
+                                    <Label fx:id="a4Name" text="Label" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="26.0" />
+                                       </font></Label>
+                                    <Label fx:id="a4Weapon" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="26.0" />
+                                       </font></Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Weapon Information">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane prefHeight="285.0" prefWidth="530.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.199951171875" minWidth="10.0" prefWidth="283.6000122070312" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.8000305175781" minWidth="10.0" prefWidth="267.3999877929688" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="369.5999755859375" minWidth="10.0" prefWidth="309.5999755859375" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.20001220703125" minWidth="10.0" prefWidth="263.20001220703125" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ImageView fx:id="w2Icon" fitHeight="230.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" translateX="30.0" GridPane.columnIndex="2" />
+                              <ImageView fx:id="w3Icon" fitHeight="230.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" translateX="30.0" GridPane.rowIndex="1" />
+                              <ImageView fx:id="w4Icon" fitHeight="230.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" translateX="30.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <ImageView fx:id="w1Icon" fitHeight="230.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" translateX="30.0" />
+                              <GridPane GridPane.columnIndex="1">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Damage:" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fire Rate:" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Label fx:id="w1Name" text="Label" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                    <Label fx:id="w1Damage" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                    <Label fx:id="w1Fire" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Damage:" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fire Rate:" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Label fx:id="w3Damage" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                    <Label fx:id="w3Name" text="Label" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                    <Label fx:id="w3Fire" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Damage:" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fire Rate:" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Label fx:id="w2Name" text="Label" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                    <Label fx:id="w2Damage" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                    <Label fx:id="w2Fire" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Damage:" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fire Rate:" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Label fx:id="w4Name" text="Label" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                    <Label fx:id="w4Damage" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                    <Label fx:id="w4Fire" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Enemy Information">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane prefHeight="285.0" prefWidth="530.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="554.8" minWidth="10.0" prefWidth="264.8000366210938" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="530.9999542236328" minWidth="0.0" prefWidth="282.9999877929687" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="497.5999755859375" minWidth="10.0" prefWidth="281.99992675781255" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.00007324218745" minWidth="10.0" prefWidth="292.00007324218745" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ImageView fx:id="e2Icon" fitHeight="230.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" translateX="30.0" GridPane.columnIndex="2" />
+                              <ImageView fx:id="e1Icon" fitHeight="230.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" translateX="30.0" />
+                              <GridPane GridPane.columnIndex="1">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Speed:" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Label fx:id="e1Name" text="Label" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                    <Label fx:id="e1Speed" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Label fx:id="e1Type" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane prefHeight="278.0" prefWidth="278.0" GridPane.columnIndex="3">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Speed:" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Label fx:id="e2Name" text="Label" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                    <Label fx:id="e2Speed" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Text>
+                                    <Label fx:id="e2Type" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Cooper Black" size="24.0" />
+                                       </font></Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
